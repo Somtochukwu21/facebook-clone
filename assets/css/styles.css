@@ -29,6 +29,7 @@
     --search-bar-bg: #3A3B3C;
     --home-icon-c: #4496F9;
     /*2374E1 */
+    --x-mark: #3F4042;
     --hover-c: #292A2C;
     --general-color: #E4E6EB;
 }
@@ -44,27 +45,178 @@ body {
 /* THE HEADER */
 header {
     background: var(--header-bg);
-    height: 55px;
-    padding: 0.5em 1em 0.5em 1em;
+    /* height: 55px; */
+    padding: 0.3em 1em;
     border-bottom: 1px solid var(--search-bar-bg);
     position: relative;
 }
 
 /* THE ICON AND SEARCH BAR WRAPPER */
-.icon-search {
+#icon-search {
     display: flex;
     align-items: center;
     gap: 0.5em;
-
 }
 
+/* THE SVG */
+#icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 5px;
+}
+
+
 /* THE SEARCH BAR WRAPPER */
-.search-bar-w{
-display: flex;
-/* gap: 3em; */
+.search-bar-w {
+    /* display: flex; */
+    /* flex-direction:column; */
+    /* gap: 3em; */
+    position: relative;
 }
 
 /* THE FORM  */
-.the-form{
-    
+.the-form {
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+    background: var(--search-bar-bg);
+    padding: 9px 9px 9px 13px;
+    height: 40px;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    width: 250px;
+}
+
+/* THE SEARCH ICON */
+#search-icon {
+    color: var(--search-icon);
+    font-family: SourceLight;
+}
+
+/* THE INPUT */
+#the-search {
+    background: none;
+    border: none;
+    outline: none;
+}
+
+/* THE INPUT PLACEHOLDER */
+#the-search::placeholder {
+    font-size: 15px;
+    text-transform: capitalize;
+    color: var(--search-icon);
+}
+
+/* THE RECENT SEARCHES WRAPPER */
+#recentSearches {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 2.9em;
+    gap: 1em;
+    right: -0.54em;
+    width: 320px;
+    background: var(--header-bg);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    padding: 1em 0.5em 1em 1em;
+}
+
+/* THE RECENT SEARCH HEADER WRAPPER WITH  THE EDIT LINK */
+.recent-search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* THE RECENT SEARCHES HEADER */
+#recentSearch {
+    font-size: 16px;
+}
+
+/* THE X ICON IN THE RECENT SEARCHES */
+.mark {
+    font-size: 19px;
+    font-family: SourceBold;
+    display: block;
+    cursor: pointer;
+    padding: 0.4em 0.5em;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+/* THE X ICON IN THE RECENT SEARCHES |HOVER EFFECT */
+.mark:hover {
+    background: var(--hover-c);
+}
+
+/* THE IMAGE AND ICON WRAPPER  */
+.image-n-icon {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.2em;
+    height: 50px;
+    width: 100%;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+/* THE IMAGE AND ICON WRAPPER |HOVER  EFFECT */
+.image-n-icon:hover {
+        background: var(--hover-c);
+
+    }
+
+/* THE IMAGE AND NAME WRAPPER  */
+.image-n-name {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+/* THE IMAGE AND NAME WRAPPER | THE IMAGE ITSELF */
+.image-in-recent {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+/* THE IMAGE AND NAME WRAPPER | THE NAME PARAGRAPH ITSELF */
+.namePara {
+    text-transform: capitalize;
+}
+
+/* THE CANCEL ICON BESIDE THE IMAGE AND NAME */
+.linkmark {
+    color: var(--search-icon);
+    padding-top: 0.3em;
+    text-align: center;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+/* THE CANCEL ICON BESIDE THE IMAGE AND NAME |HOVER EFFECT*/
+.linkmark:hover {
+    background: var(--x-mark);
 }
