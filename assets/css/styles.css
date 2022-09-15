@@ -1,0 +1,70 @@
+/* DEFAULT RESETS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* IMPORTING THE FONTS I DOWNLOADED */
+@font-face {
+    font-family: SourceRegular;
+    src: url(../fonts/Source_Sans_3/static/SourceSans3-Regular.ttf);
+}
+
+@font-face {
+    font-family: SourceBold;
+    src: url(../fonts/Source_Sans_3/static/SourceSans3-Bold.ttf);
+}
+
+@font-face {
+    font-family: SourceLight;
+    src: url(../fonts/Source_Sans_3/static/SourceSans3-Light.ttf);
+}
+
+:root {
+    --body-bg: #18191A;
+    --header-bg: #242526;
+    --bar-text-c: rgba(0, 0, 0, 0.15);
+    --search-icon: #afb4b9;
+    --search-bar-bg: #3A3B3C;
+    --home-icon-c: #4496F9;
+    /*2374E1 */
+    --hover-c: #292A2C;
+    --general-color: #E4E6EB;
+}
+
+/* THE BODY */
+body {
+    font-style: 16px;
+    background: var(--body-bg);
+    font-family: SourceRegular;
+    color: var(--general-color);
+}
+
+/* THE HEADER */
+header {
+    background: var(--header-bg);
+    height: 55px;
+    padding: 0.5em 1em 0.5em 1em;
+    border-bottom: 1px solid var(--search-bar-bg);
+    position: relative;
+}
+
+/* THE ICON AND SEARCH BAR WRAPPER */
+.icon-search {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+
+}
+
+/* THE SEARCH BAR WRAPPER */
+.search-bar-w{
+display: flex;
+/* gap: 3em; */
+}
+
+/* THE FORM  */
+.the-form{
+    
+}
