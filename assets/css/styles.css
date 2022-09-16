@@ -27,11 +27,12 @@
     --bar-text-c: rgba(0, 0, 0, 0.15);
     --search-icon: #afb4b9;
     --search-bar-bg: #3A3B3C;
-    --home-icon-c: #4496F9;
+    --home-icon-c: #046EE4;
     /*2374E1 */
     --x-mark: #3F4042;
     --hover-c: #292A2C;
     --general-color: #E4E6EB;
+    --title-bg: rgb(175, 180, 185, 0.3);
 }
 
 /* THE BODY */
@@ -45,10 +46,15 @@ body {
 /* THE HEADER */
 header {
     background: var(--header-bg);
-    /* height: 55px; */
-    padding: 0.3em 1em;
+    height: 55px;
+    width: 100%;
+    padding: 0.5em 1em;
     border-bottom: 1px solid var(--search-bar-bg);
     position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    flex-wrap: wrap;
 }
 
 /* THE ICON AND SEARCH BAR WRAPPER */
@@ -64,15 +70,16 @@ header {
     height: 40px;
     border-radius: 50%;
     text-align: center;
-    padding-top: 5px;
+    padding-top: 3px;
 }
 
+/* THE LOGO  */
+#logo {
+    color: var(--general-color);
+}
 
 /* THE SEARCH BAR WRAPPER */
 .search-bar-w {
-    /* display: flex; */
-    /* flex-direction:column; */
-    /* gap: 3em; */
     position: relative;
 }
 
@@ -103,6 +110,8 @@ header {
     background: none;
     border: none;
     outline: none;
+    color: var(--general-color);
+    font-size: 16px;
 }
 
 /* THE INPUT PLACEHOLDER */
@@ -118,12 +127,14 @@ header {
     flex-direction: column;
     position: absolute;
     top: 2.9em;
-    gap: 1em;
+    gap: 0.3em;
     right: -0.54em;
     width: 320px;
     background: var(--header-bg);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
     padding: 1em 0.5em 1em 1em;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 /* THE RECENT SEARCH HEADER WRAPPER WITH  THE EDIT LINK */
@@ -163,7 +174,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.2em;
+    padding-left: 0.3em;
     height: 50px;
     width: 100%;
     border-radius: 8px;
@@ -175,9 +186,9 @@ header {
 
 /* THE IMAGE AND ICON WRAPPER |HOVER  EFFECT */
 .image-n-icon:hover {
-        background: var(--hover-c);
+    background: var(--hover-c);
 
-    }
+}
 
 /* THE IMAGE AND NAME WRAPPER  */
 .image-n-name {
@@ -200,6 +211,8 @@ header {
 /* THE IMAGE AND NAME WRAPPER | THE NAME PARAGRAPH ITSELF */
 .namePara {
     text-transform: capitalize;
+    color: var(--general-color);
+    text-decoration: none;
 }
 
 /* THE CANCEL ICON BESIDE THE IMAGE AND NAME */
@@ -219,4 +232,92 @@ header {
 /* THE CANCEL ICON BESIDE THE IMAGE AND NAME |HOVER EFFECT*/
 .linkmark:hover {
     background: var(--x-mark);
+}
+
+/* ICONS IN THE MIDDLE OF THE NAV BAR */
+.home-icons {
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 0.5em;
+
+    /* flex-grow: 1; */
+}
+
+
+
+/* THE LINKS IN THE HOME ICON | THE ACTIVE ONE*/
+.icon-parent>a>span::after {
+    content: '';
+    display: flex;
+    border-bottom: 2px solid var(--home-icon-c);
+    width: 100px;
+    height: 40px;
+    position: absolute;
+    top: 5px;
+}
+
+/* THE UNACTIVE ICONS GROUPED WITH THE AKTIVE ICON*/
+.hover-icons,
+.icon-parent {
+    position: relative;
+    width: 100px;
+    height: 44px;
+    text-align: center;
+    padding-top: 0.6em;
+}
+
+/* THE UNACTIVE ICONS HOVER EFFECT*/
+
+.hover-icons:hover {
+    background: var(--x-mark);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.hover-icons a {
+    display: block;
+    width: 90px;
+    color: var(--general-color);
+}
+
+/* THE DROPDOWN PARAGRAPH WITH TITLE NAME */
+.drop-c {
+    position: absolute;
+    top: 53px;
+    right: 0.9em;
+    background: var(--title-bg);
+    height: 90%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    border-radius: 10px;
+    opacity: 0;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: opacity 0.5s linear 0.8ms;
+    -webkit-transition: opacity 0.5s linear 0.8ms;
+    -moz-transition: opacity 0.5s linear 0.8ms;
+    -ms-transition: opacity 0.5s linear 0.8ms;
+    -o-transition: opacity 0.5s linear 0.8ms;
+}
+
+/* THE UNACTIVE ICONS DROPDOWN HOVER EFFECT*/
+.hover-icons:hover .drop-c,
+.icon-parent:hover .drop-c {
+    opacity: 1;
+}
+
+.notif-mess {
+    background: red;
+display: flex;
+align-items: center;
 }
