@@ -6,7 +6,8 @@ let iconEl = document.getElementById("icon");
 
 iconEl.style.background = "#046EE4";
 
-logoEl.innerHTML = '<i id="logo" class="fa-brands fa-facebook-f"></i>';
+logoEl.innerHTML =
+  '<i id="logo" style="color:white;" class="fa-brands fa-facebook-f"></i>';
 
 logoEl.style.fontSize = "32px";
 
@@ -24,7 +25,7 @@ function getRecentSearches() {
 
 function cancel() {
   searchEl.style.display = "flex";
-  logoEl.innerHTML = '<i id="logo" class="fa-brands fa-facebook-f"></i>';
+  logoEl.innerHTML =   '<i id="logo" style="color:white;" class="fa-brands fa-facebook-f"></i>';
   logoEl.style.fontSize = "32px";
   iconEl.style.background = "none";
   recentSearches.style.display = "none";

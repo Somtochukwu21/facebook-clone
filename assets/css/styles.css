@@ -25,7 +25,7 @@
     --body-bg: #18191A;
     --header-bg: #242526;
     --bar-text-c: rgba(0, 0, 0, 0.15);
-    --search-icon: #afb4b9;
+    --search-icon: silver;
     --search-bar-bg: #3A3B3C;
     --home-icon-c: #2374E1;
     /*2374E1 */
@@ -46,9 +46,9 @@ body {
 /* THE HEADER */
 header {
     background: var(--header-bg);
-    /* height: 55px; */
+    /* height: 50px; */
     width: 100%;
-    padding: 0.2em 1em;
+    padding: 0em 1em;
     border-bottom: 1px solid var(--search-bar-bg);
     position: relative;
     display: flex;
@@ -84,7 +84,7 @@ header {
 
 /* THE LOGO  */
 #logo {
-    color: var(--general-color);
+    color: var(--search-icon);
 }
 
 /* THE SEARCH BAR WRAPPER */
@@ -248,7 +248,7 @@ header {
     display: flex;
     align-items: center;
     position: relative;
-    gap: 0.5em;
+    gap: 0.6em;
 
     /* flex-grow: 1; */
 }
@@ -271,7 +271,7 @@ header {
     width: 100px;
     height: 44px;
     text-align: center;
-    padding-top: 0.5em;
+    padding-top: 0.6em;
 }
 
 /* THE UNACTIVE ICONS HOVER EFFECT*/
@@ -323,24 +323,62 @@ header {
 .notif-mess {
     display: flex;
     align-items: center;
-    gap: 0.6em;
+    gap: 0.4em;
 }
 
-.header-4icons {
+/* THE MESSAGE AND NOTIFICATION ICONS */
+.header-3icons {
     background: var(--search-bar-bg);
-    width: 35px;
-    text-align: center;
+    width: 37px;
+    height: 37px;
     padding: 0.5em;
     position: relative;
-    height: 35px;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+}
+
+/* THE CIRCULAR PROFILE IMAGE*/
+.header-image {
+    position: relative;
+    /* background: red; */
+    padding-top: 0.5em;
+}
+
+.header-image img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
 }
 
 /* THE NOTIFICATION MESSAGE ICONS LINK */
 .notif-mess a {
     color: var(--general-color);
+}
+
+.grid {
+    display: flex;
+    gap: 1em;
+    /* grid-template-columns: repeat(3, 1fr); */
+}
+
+.grid1 {
+    background: #2374E1;
+    height: 90vh;
+    width: 100%;
+}
+
+.g3 {
+    /* flex: 1; */
+    /* background: red; */
+    /* grid-column: 2/4; */
 }
