@@ -34,5 +34,5 @@ function cancel() {
 function deleteUserName() {
   const deletedUser = document.getElementById("deleteUser");
   // alert(deletedUser)
-  deletedUser.style.display='none';
+  deletedUser.style.display = "none";
 }
